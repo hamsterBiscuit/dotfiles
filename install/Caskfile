@@ -27,6 +27,7 @@ cask "tencent-lemon"
 cask "visual-studio-code"
 cask "wechat"
 cask "wechatwebdevtools"
+cask "cheatsheet"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 cask "qlcolorcode"
