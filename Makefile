@@ -13,14 +13,14 @@ macos: core-macos packages link
 
 linux: core-linux link
 
-core-mac: brew bash git node ruby
+core-macos: brew bash git node ruby
 
 core-linux:
 	apt-get update
 	apt-get upgrade -y
 	apt-get dist-upgrade -f
 
-stow-macos: brew 
+stow-macos: brew
 	is-executable stow || brew install btow
 
 stow-linux: core-linux
@@ -59,7 +59,6 @@ brew-packages: brew
 cask-apps: brew
 	brew bundle --file=$(DOTFILES_DIR)/install/Caskfile || true
 	defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
-	for EXT in $$(cat install/Codefile); do code --install-extension $$EXT; done
 	xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 node-packages: node
