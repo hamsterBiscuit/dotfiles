@@ -1,0 +1,15 @@
+[user]
+	email = 77aimiao@gmail.com
+	name = yongqi
+[core]
+	excludesfile = /Users/yongqi/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[https]
+	proxy = socks5://127.0.0.1:9091
+[commit]
+	template = /Users/yongqi/.stCommitMsg
