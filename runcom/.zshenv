@@ -6,6 +6,15 @@ export LANG=en_US.UTF-8
 #Homebrew's sbin
 export PATH="/usr/local/sbin:$PATH"
 
+if [ -d "$HOME/.dotfiles" ]; then
+  export DOTFILES_DIR="$HOME/.dotfiles"
+else
+  echo "Unable to find dotfiles, exiting."
+  return
+fi
+
+export PATH="$DOTFILES_DIR/bin:$PATH"
+
 # Go
 export GOPATH="$HOME/workspace"
 export GO111MODULE="on"

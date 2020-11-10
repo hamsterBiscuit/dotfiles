@@ -8,12 +8,8 @@ sub_help () {
   echo "Usage: $BIN_NAME <command>"
   echo
   echo "Commands:"
-  echo "   clean            Clean up caches (brew, nvm, gem)"
   echo "   dock             Apply macOS Dock settings"
-  echo "   edit             Open dotfiles in IDE ($DOTFILES_IDE) and Git GUI ($DOTFILES_GIT_GUI)"
   echo "   help             This help message"
-  echo "   macos            Apply macOS system defaults"
-  echo "   test             Run tests"
   echo "   update           Update packages and pkg managers (OS, brew, npm, gem)"
 }
 
@@ -23,13 +19,6 @@ sub_update () {
   brew upgrade
   npm install npm -g
   vi +PluginUpdate +quit +quit
-}
-
-sub_macos () {
-  for DEFAULTS_FILE in "${DOTFILES_DIR}"/macos/defaults*.sh; do
-    echo "Applying ${DEFAULTS_FILE}" && . "${DEFAULTS_FILE}"
-  done
-  echo "Done. Some changes may require a logout/restart to take effect."
 }
 
 sub_dock () {
