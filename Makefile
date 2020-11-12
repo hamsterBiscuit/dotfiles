@@ -13,7 +13,7 @@ macos: core-macos packages link
 
 linux: core-linux link
 
-core-macos: brew bash git node ruby
+core-macos: brew git node ruby
 
 core-linux:
 	apt-get update
@@ -21,7 +21,7 @@ core-linux:
 	apt-get dist-upgrade -f
 
 stow-macos: brew
-	is-executable stow || brew install btow
+	is-executable stow || brew install stow
 
 stow-linux: core-linux
 	is-executable stow || apt-get -y install stow
@@ -29,8 +29,8 @@ stow-linux: core-linux
 packages: brew-packages cask-apps node-packages
 
 link: stow-$(OS)
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  # curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh | bash
+  # curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 	for FILE in $$(\ls -A runcom); do if [ -f $(HOME)/$$FILE -a ! -h $(HOME)/$$FILE ]; then \
 		mv -v $(HOME)/$$FILE{,.bak}; fi; done
 	mkdir -p $(XDG_CONFIG_HOME)
@@ -46,11 +46,14 @@ unlink: stow-$(OD)
 brew:
 	is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh | bash
 
+bash: BASH=/usr/local/bin/bash
+bash: SHELLS=/private/etc/shells
+
 git: brew
 	brew install git git-extras
 
 node: brew
-	brew install node
+	is-executable node || brew install node
 
 ruby: brew
 	brew install ruby
