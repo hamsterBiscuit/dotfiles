@@ -14,15 +14,20 @@ sub_help () {
 }
 
 sub_update () {
-  sudo softwareupdate -i -a
   brew update
   brew upgrade
   npm install npm -g
-  vi +PluginUpdate +quit +quit
+  npm update -g
+  update_nvim
 }
 
 sub_dock () {
   . "${DOTFILES_DIR}/macos/dock.sh" && echo "Dock reloaded."
+}
+
+sub_updatenvim () {
+  update_nvim
+  nvim +PlugUpdate +quit +quit
 }
 
 case $COMMAND_NAME in
