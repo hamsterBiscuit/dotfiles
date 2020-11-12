@@ -63,8 +63,6 @@ brew-packages: brew
 
 cask-apps: brew
 	brew bundle --file=$(DOTFILES_DIR)/install/Caskfile || true
-	defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
-	xattr -d -r com.apple.quarantine ~/Library/QuickLook
 
 node-packages: node
 	npm install -g $(shell cat install/npmfile)
