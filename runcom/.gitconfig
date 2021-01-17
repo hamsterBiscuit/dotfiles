@@ -13,3 +13,5 @@
 	proxy = socks5://127.0.0.1:9091
 [commit]
 	template = /Users/yongqi/.stCommitMsg
+[init]
+	defaultBranch = main

@@ -23,8 +23,9 @@ autoload -Uz _zinit
     # tmux attach -t work || tmux new -s work
 # fi
 
-zinit ice depth=1 atload"!source ~/.p10k.zsh" lucid nocd
-zinit light romkatv/powerlevel10k
+zinit ice depth=1 atload"!source ~/.zshprompt.zsh" lucid nocd
+# zinit ice depth=1 atload"!source ~/.p10k.zsh" lucid nocd
+# zinit light romkatv/powerlevel10k
 
 # Oh-my-zsh plugins
 zinit snippet OMZ::lib/history.zsh
@@ -69,9 +70,6 @@ zinit snippet OMZ::plugins/autojump/autojump.plugin.zsh
 zinit ice depth=1 lucid
 zinit light trystan2k/zsh-tab-title
 
-zinit ice depth=1 wait lucid
-zinit light Aloxaf/fzf-tab
-
 zinit ice depth=1 wait blockf lucid atpull"zinit creinstall -q ."
 zinit light clarketm/zsh-completions
 
@@ -90,17 +88,9 @@ zinit light wfxr/formarks
 zinit ice depth=1 wait"1" lucid pick"manydots-magic" compile"manydots-magic"
 zinit light knu/zsh-manydots-magic
 
-zinit ice depth=1 wait"1" lucid atinit"zstyle ':history-search-multi-word' page-size '20'"
-zinit light zdharma/history-search-multi-word
-
-zinit ice depth=1 wait"2" lucid
-zinit light wfxr/forgit
-
 zinit ice depth=1 wait"2" lucid
 zinit light hlissner/zsh-autopair
 
 zinit ice depth=1 wait"2" lucid
 zinit light peterhurford/up.zsh
 
-zinit ice depth=1 wait"2" lucid
-zinit light MichaelAquilina/zsh-you-should-use
