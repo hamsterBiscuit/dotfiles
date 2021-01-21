@@ -33,3 +33,5 @@ export REACT_EDITOR="nvim"
 
 # Yabai
 export YABAI_CERT=yabai-cert
+
+export PATH="/usr/local/opt/llvm/bin:$PATH"
