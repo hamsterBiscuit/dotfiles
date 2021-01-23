@@ -23,9 +23,9 @@ autoload -Uz _zinit
     # tmux attach -t work || tmux new -s work
 # fi
 
-zinit ice depth=1 atload"!source ~/.zshprompt.zsh" lucid nocd
-# zinit ice depth=1 atload"!source ~/.p10k.zsh" lucid nocd
-# zinit light romkatv/powerlevel10k
+# zinit ice depth=1 atload"!source ~/.zshprompt.zsh" lucid nocd
+zinit ice depth=1 atload"!source ~/.p10k.zsh" lucid nocd
+zinit light romkatv/powerlevel10k
 
 # Oh-my-zsh plugins
 zinit snippet OMZ::lib/history.zsh
