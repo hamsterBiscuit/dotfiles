@@ -23,17 +23,19 @@ My DotFiles for macOS
 - [Raycast](https://raycast.com/extensions/github)
 - QQ 体验版
 - things
+- clashx
+- spark
 
 ## 安装软件
 
 ```bash
-bash -c "`curl -fsSL https://raw.githubusercontent.com/yongqi-zhang/dotfiles/master/remote-install.sh`"
+bash -c "`curl -fsSL https://raw.githubusercontent.com/hamsterBiscuit/dotfiles/main/remote-install.sh`"
 ```
 
 or
 
 ```bash
-git clone https://github.com/yongqi-zhang/dotfiles.git ~/.dotfiles
+git clone https://github.com/hamsterBiscuit/dotfiles.git ~/.dotfiles
 ```
 
 ```bash

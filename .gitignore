@@ -2,3 +2,4 @@
 runcom/.tmux/plugins
 runcom/.tmux/resurrect
 install/Brewfile.lock.json
+install/Caskfile.lock.json
