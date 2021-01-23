@@ -1,2 +1,10 @@
 yarn
 @vue/cli
+pyright
+vscode-json-languageserver
+vscode-css-languageserver-bin
+vim-language-server
+vls
+typescript-language-server
+diagnostic-languageserver
+vscode-html-languageserver-bin
