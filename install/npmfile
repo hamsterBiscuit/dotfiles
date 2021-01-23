@@ -8,3 +8,4 @@ vls
 typescript-language-server
 diagnostic-languageserver
 vscode-html-languageserver-bin
+npm-check
