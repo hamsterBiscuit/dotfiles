@@ -10,3 +10,4 @@ diagnostic-languageserver
 vscode-html-languageserver-bin
 npm-check
 hexo-cli
+lua-fmt
