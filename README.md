@@ -26,6 +26,10 @@ My DotFiles for macOS
 - clashx
 - spark
 
+## 字体
+
+- [SourceCodePro](https://www.nerdfonts.com/font-downloads)
+
 ## 安装软件
 
 ```bash
