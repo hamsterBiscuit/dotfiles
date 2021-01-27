@@ -6,6 +6,11 @@ alias ll="ls -l"
 alias la="ls -la"
 alias lt="ls --tree"
 
+alias zc='z -c'      # 严格匹配当前路径的子路径
+alias zz='z -i'      # 使用交互式选择模式
+alias zf='z -I'      # 使用 fzf 对多个结果进行选择
+alias zb='z -b'      # 快速回到父目录
+
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
 	print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
@@ -17,11 +22,6 @@ fi
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-
-# if [ -z "$TMUX" ]
-# then
-    # tmux attach -t work || tmux new -s work
-# fi
 
 # zinit ice depth=1 atload"!source ~/.zshprompt.zsh" lucid nocd
 zinit ice depth=1 atload"!source ~/.p10k.zsh" lucid nocd
@@ -90,4 +90,7 @@ zinit light hlissner/zsh-autopair
 
 zinit ice depth=1 wait"2" lucid
 zinit light peterhurford/up.zsh
+
+zinit ice depth=1 wait"2" lucid
+zinit light skywind3000/z.lua
 
