@@ -11,3 +11,11 @@ command:perl=perl "$(VIM_FILENAME)"
 command:ruby=ruby "$(VIM_FILENAME)"
 output=terminal
 cwd=$(VIM_FILEDIR)
+
+[file-build]
+command:c,cpp=gcc -O2 -Wall "$(VIM_FILEPATH)" -o "$(VIM_PATHNOEXT)" -lstdc++ -lm -msse3
+command:go=go build -o "$(VIM_PATHNOEXT)" "$(VIM_FILEPATH)"
+command:make=make -f "$(VIM_FILEPATH)"
+output=quickfix
+cwd=$(VIM_FILEDIR)
+save=2
