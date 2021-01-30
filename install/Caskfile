@@ -27,7 +27,8 @@ cask "wechat"
 cask "wechatwebdevtools"
 cask "cheatsheet"
 cask "mos"
-cash "picgo"
+cask "picgo"
+cask "telegram"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 cask "qlcolorcode"
