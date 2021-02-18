@@ -27,7 +27,7 @@ sub_dock () {
 
 sub_updatenvim () {
   update_nvim
-  nvim +PackerUpdate +quit +quit
+  # nvim +PackerUpdate +quit +quit
 }
 
 case $COMMAND_NAME in
