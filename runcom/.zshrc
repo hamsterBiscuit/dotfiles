@@ -94,3 +94,13 @@ zinit light peterhurford/up.zsh
 zinit ice depth=1 wait"2" lucid
 zinit light skywind3000/z.lua
 
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" >/dev/null
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+
