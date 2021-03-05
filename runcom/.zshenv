@@ -35,3 +35,11 @@ export REACT_EDITOR="nvim"
 export YABAI_CERT=yabai-cert
 
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# Bat
+export BAT_THEME="TwoDark"
+
+# Fzf
+export FZF_COMPLETION_TRIGGER='**'
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
+export FZF_DEFAULT_OPTS='--height 90% --layout reverse --border --color "border:#b877db" --preview="bat --color=always {}"'
