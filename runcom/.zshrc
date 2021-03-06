@@ -23,8 +23,7 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-# zinit ice depth=1 atload"!source ~/.zshprompt.zsh" lucid nocd
-zinit ice depth=1 atload"!source ~/.p10k.zsh" lucid nocd
+zinit ice depth=1 atload"!source ~/.p10k-evilball.zsh" lucid nocd
 zinit light romkatv/powerlevel10k
 
 # Oh-my-zsh plugins
@@ -76,20 +75,20 @@ zinit light zdharma/fast-syntax-highlighting
 zinit ice depth=1 wait lucid compile"{src/*.zsh,src/strategies/*.zsh}" atload"_zsh_autosuggest_start"
 zinit light zsh-users/zsh-autosuggestions
 
-zinit ice depth=1 wait lucid atload"bindkey '$terminfo[kcuu1]' history-substring-search-up; bindkey '$terminfo[kcud1]' history-substring-search-down"
-zinit light zsh-users/zsh-history-substring-search
+zinit ice depth=1 wait"1" lucid atinit"zstyle ':history-search-multi-word' page-size '20'"
+zinit light zdharma/history-search-multi-word
 
-zinit ice depth=1 wait lucid
-zinit light wfxr/formarks
-
-zinit ice depth=1 wait"1" lucid pick"manydots-magic" compile"manydots-magic"
-zinit light knu/zsh-manydots-magic
+zinit ice depth=1 wait"2" lucid
+zinit light wfxr/forgit
 
 zinit ice depth=1 wait"2" lucid
 zinit light hlissner/zsh-autopair
 
 zinit ice depth=1 wait"2" lucid
 zinit light peterhurford/up.zsh
+
+zinit ice depth=1 wait"2" lucid
+zinit light MichaelAquilina/zsh-you-should-use
 
 zinit ice depth=1 wait"2" lucid
 zinit light skywind3000/z.lua
