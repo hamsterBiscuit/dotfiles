@@ -1,21 +1,71 @@
-# Move status bar to the top
-set -g status 'on'
+OneDark='#282a36'
+NightOwl='#0F1D2A'
+Material='#263238'
+
+BACKGROUND_COLOR=$OneDark
+INACTIVE_FG_COLOR='#5c6370'
+ACTIVE_FG_COLOR='#fac863'
+
+set-option -g status-style "bg=$BACKGROUND_COLOR"
+
+# Status setup
 set -g status-position top
-set -g status-justify 'centre'
-set -g status-left-length '100'
-set -g status-right-length '100'
+set-option -g status on
+set-option -g status-fg default
+set -g status-justify left
+set -g status-interval 1
 
-set-window-option -g window-status-format '#[bg=colour238]#[fg=colour107] #I #[bg=colour239]#[fg=colour110] #[bg=colour240]#W#[bg=colour239]#[fg=colour195]#F#[bg=colour238] '
-set-window-option -g window-status-current-format '#[bg=colour236]#[fg=colour215,bold] #I:#[bg=colour235]#[fg=colour167] #[bg=colour234]#W#[bg=colour235]#[fg=colour195]#F#[bg=colour236] '
+# ------------------------------------------------------------------------------
+# components
+# ------------------------------------------------------------------------------
+# NOTE: these use nested conditionals and "," and "}" must be escaped
+set -g @cpu_low_icon "ᚋ"
+set -g @cpu_medium_icon "ᚌ"
+set -g @cpu_high_icon "ᚍ"
+set -g @batt_remain_short 'true'
 
-set -g status-left '\
-#[fg=colour232,bg=#6272a4] %Y-%m-%d \
-#[bg=#1b2b34] \
-#[fg=colour232,bg=#6272a4] %a %H:%M '
-#[fg=colour232,bg=colour154] #(rainbarf --battery --remaining --no-rgb) '
+set -g @batt_icon_status_attached '🔌'
 
-set -g status-right '\
-#{?client_prefix,🐠,} \
-#[fg=colour232,bg=#6272a4] CPU:#{cpu_percentage} \
-#[bg=#1b2b34] \
-#[fg=colour232,bg=#6272a4] MEM:#{ram_percentage} '
+separator="#[fg=$INACTIVE_FG_COLOR]|#[default]"
+
+search_icon="#{?window_zoomed_flag,#{?window_active,#[fg=blue],#[fg=default]},}"
+
+pane_count="#{?window_active,#[fg=white#,noitalics],}"
+
+status_items="#{?window_bell_flag,#[fg=red] ,}$search_icon $pane_count"
+
+# see: https://github.com/tmux-plugins/tmux-battery
+# when use mbp use #{battery_icon}
+battery="🔋 Batt: #{battery_color_fg}🔌 #{battery_remain}#[default]"
+
+cpu="#[fg=#b8cc1d,bold]CPU: #[default]#{cpu_fg_color}#{cpu_icon} #{cpu_percentage}#[default]"
+ram="#[fg=#884ad4,bold] RAM: #{ram_fg_color}#{ram_icon}#[default]"
+time="⏰ #[fg=#12b6db]%a %d %b %H:%M"
+
+# prefix
+prefix="#{?client_prefix,🐠,}"
+
+set -g status-left-length 80
+# Options -> ⧉ ❐
+set -g status-left "#{?client_prefix,#[fg=#ffffff bg=#22252B],#[fg=#e5c07b]} ❐ #S $separator"
+set -g status-right-length 70
+set -g status-right "$prefix $cpu $separator $ram $separator $battery $separator $time"
+
+set-window-option -g window-status-current-style "fg=#9ed11d"
+set-window-option -g window-status-current-format " #I: #[bold]#W $status_items"
+
+# for some unknown reason this tmux section is being set to reverse from
+# somewhere so we explictly remove it here
+set-window-option -g window-status-style "fg=$INACTIVE_FG_COLOR dim"
+set-window-option -g window-status-format "#[none] #I: #W $status_items"
+set-window-option -g window-status-separator "$separator"
+
+# Styling when in command mode i.e. vi or emacs mode in tmux command line
+set -g message-command-style 'fg=green bg=default bold,blink'
+# Regular tmux commandline styling
+set -g message-style 'fg=yellow bg=default bold'
+
+# Set window notifications
+set-option -g monitor-activity on
+set-option -g visual-activity off
+
