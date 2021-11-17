@@ -1,61 +1,103 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title": true,
+  "console_title_style": "template",
+  "console_title_template": "{{if .Root}}(Admin) {{end}}{{.Folder}}",
   "blocks": [
     {
       "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "type": "text",
-          "style": "plain",
-          "foreground": "#ffffff",
+          "type": "root",
+          "style": "powerline",
+          "powerline_symbol": "\uE0C4",
+          "foreground": "#242424",
+          "background": "#f1184c",
           "properties": {
             "prefix": "",
-            "text": "<#C591E8>\u276F</><#69FF94>\u276F</>"
+            "postfix": ""
+          }
+        },
+        {
+          "type": "os",
+          "style": "diamond",
+          "leading_diamond": " ",
+          "powerline_symbol": "",
+          "foreground": "#3A86FF",
+          "background": "#282c34",
+          "properties": {
+            "prefix": ""
+          }
+        },
+        {
+          "type": "time",
+          "style": "powerline",
+          "powerline_symbol": "\uE0C4",
+          "foreground": "#FFBB00",
+          "background": "#242424",
+          "properties": {
+            "time_format": "15:04:05",
+            "prefix": ""
           }
         },
         {
           "type": "path",
-          "style": "plain",
-          "foreground": "#56B6C2",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#33DD2D",
+          "background": "#242424",
           "properties": {
-            "prefix": "",
-            "style": "folder"
+            "prefix": "\uE5FF ",
+            "style": "folder",
+            "folder_separator_icon": "/"
           }
         },
         {
           "type": "git",
-          "style": "plain",
-          "foreground": "#D0666F",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#3A86FF",
+          "background": "#242424",
           "properties": {
-            "branch_icon": "",
-            "prefix": "<#5FAAE8>git:(</>",
-            "postfix": "<#5FAAE8>)</>",
-            "template": "{{ .HEAD }}"
+            "fetch_status": true,
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true,
+            "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }}",
+            "prefix": ""
+          }
+        },
+        {
+          "type": "dotnet",
+          "style": "powerline",
+          "powerline_symbol": "\uE0C4",
+          "foreground": "#ffffff",
+          "background": "#0184bc",
+          "properties": {
+            "prefix": "  "
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "powerline",
+          "powerline_symbol": "\uE0C4",
+          "foreground": "#ffffff",
+          "background": "#8800dd",
+          "properties": {
+            "threshold": 1,
+            "style": "austin",
+            "prefix": " <#fefefe>\ufbab</> "
           }
         },
         {
           "type": "exit",
-          "style": "plain",
-          "foreground": "#DCB977",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B4",
+          "foreground": "#242424",
+          "background": "#33DD2D",
+          "background_templates": ["{{ if gt .Code 0 }}#f1184c{{ end }}"],
           "properties": {
-            "template": "\uF119",
-            "prefix": " "
-          }
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "right",
-      "segments": [
-        {
-          "type": "command",
-          "style": "plain",
-          "foreground": "#ffffff",
-          "properties": {
-            "shell": "bash",
-            "command": "git log --pretty=format:%cr -1 || date +%H:%m:%S"
+            "template": "\uF7d4"
           }
         }
       ]
@@ -68,10 +110,10 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "#ffffff",
+          "foreground": "#f1184c",
           "properties": {
             "prefix": "",
-            "text": "\uF441"
+            "text": "\u279C"
           }
         }
       ]
