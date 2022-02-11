@@ -123,3 +123,5 @@ eval "$(oh-my-posh --init --shell zsh --config ~/.poshthemes/jandedobbeleer.omp.
 
 export PNPM_HOME="/Users/zhangyongqi/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+alias luamake=/Users/zhangyongqi/develop/lua-language-server/3rd/luamake/luamake

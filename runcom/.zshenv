@@ -48,3 +48,6 @@ export FZF_DEFAULT_OPTS='--height 90% --layout reverse --border --color "border:
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Lua
+export PATH="$HOME/develop/lua-language-server/bin:$PATH"
