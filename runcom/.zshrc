@@ -91,6 +91,9 @@ zinit light MichaelAquilina/zsh-you-should-use
 zinit ice depth=1 wait"2" lucid
 zinit light skywind3000/z.lua
 
+zinit ice depth=1 wait"2" lucid
+zinit light lukechilds/zsh-nvm
+
 # open file
 fo() {
   #IFS=$'\n' out=("$(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
