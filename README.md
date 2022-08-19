@@ -21,7 +21,6 @@ My DotFiles for macOS
 ## 非自动安装软件清单
 
 - [Raycast](https://raycast.com/extensions/github)
-- QQ 体验版
 - things
 - clashx
 - spark

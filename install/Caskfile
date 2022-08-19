@@ -25,6 +25,9 @@ cask "cheatsheet"
 cask "mos"
 cask "picgo"
 cask "telegram"
+cask "feishu"
+cask "itsycal"
+cask "clashx"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 cask "qlcolorcode"
