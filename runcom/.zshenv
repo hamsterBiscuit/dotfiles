@@ -49,3 +49,4 @@ export NVM_LAZY_LOAD=true
 
 # Lua
 export PATH="$HOME/develop/lua-language-server/bin:$PATH"
+. "$HOME/.cargo/env"
