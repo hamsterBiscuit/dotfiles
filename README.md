@@ -24,6 +24,7 @@ My DotFiles for macOS
 - things
 - clashx
 - spark
+- wooshy
 
 ## 字体
 
