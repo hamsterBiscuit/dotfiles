@@ -25,6 +25,8 @@ My DotFiles for macOS
 - clashx
 - spark
 - wooshy
+- input source pro
+- wooshy
 
 ## 字体
 
