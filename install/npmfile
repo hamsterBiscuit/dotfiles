@@ -1,5 +1,4 @@
 yarn
-@vue/cli
 pyright
 vscode-json-languageserver
 vscode-css-languageserver-bin
