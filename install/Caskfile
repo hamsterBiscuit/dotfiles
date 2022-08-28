@@ -24,4 +24,5 @@ cask "telegram"
 cask "feishu"
 cask "itsycal"
 cask "clashx"
+cask "alacritty"
 
