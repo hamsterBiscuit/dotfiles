@@ -50,3 +50,7 @@ export NVM_LAZY_LOAD=true
 # Lua
 export PATH="$HOME/develop/lua-language-server/bin:$PATH"
 . "$HOME/.cargo/env"
+
+# npm modules
+export NPM_MODULES="/Users/zhangyongqi/.nvm/versions/node/v18.8.0/lib/node_modules"
+
