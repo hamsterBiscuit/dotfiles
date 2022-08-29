@@ -13,6 +13,8 @@ shell:
   args:
     # login
     - -l
+    - -c
+    - 'zellij attach --index 0 --create'
 
 window:
   # 窗口大小
@@ -22,8 +24,8 @@ window:
 
   # 边缘空白
   padding:
-    x: 10
-    y: 15
+    x: 16
+    y: 16
   dynamic_padding: false
   startup_mode: Maximized
   # 窗口修饰
@@ -62,4 +64,35 @@ font:
 
   # 细描边
   use_thin_strokes: true
+cursor:
+  style:
+    shape: Beam
 
+# Colors (iTerm 2 default theme)
+colors:
+  # Default colors
+  primary:
+    background: '#282c34'
+    foreground: '#abb2bf'
+
+  # Normal colors
+  normal:
+    black:   '#282c34'
+    red:     '#e06c75'
+    green:   '#98c379'
+    yellow:  '#e5c07b'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#abb2bf'
+
+  # Bright colors
+  bright:
+    black:   '#5c6370'
+    red:     '#d19a66'
+    green:   '#56b6c2'
+    yellow:  '#e5c07b'
+    blue:    '#61afef'
+    magenta: '#c678dd'
+    cyan:    '#56b6c2'
+    white:   '#abb2bf'
