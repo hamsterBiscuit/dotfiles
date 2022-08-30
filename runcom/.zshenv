@@ -52,5 +52,5 @@ export PATH="$HOME/develop/lua-language-server/bin:$PATH"
 . "$HOME/.cargo/env"
 
 # npm modules
-export NPM_MODULES="/Users/zhangyongqi/.nvm/versions/node/v18.8.0/lib/node_modules"
+export NPM_MODULES="/usr/local/lib/node_modules"
 

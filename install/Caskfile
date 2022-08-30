@@ -25,4 +25,5 @@ cask "feishu"
 cask "itsycal"
 cask "clashx"
 cask "alacritty"
+cask "fnm"
 

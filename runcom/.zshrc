@@ -91,8 +91,8 @@ zinit light MichaelAquilina/zsh-you-should-use
 zinit ice depth=1 wait"2" lucid
 zinit light skywind3000/z.lua
 
-zinit ice depth=1 wait"2" lucid
-zinit light lukechilds/zsh-nvm
+# zinit ice depth=1 wait"2" lucid
+# zinit light lukechilds/zsh-nvm
 
 # open file
 fo() {
@@ -123,6 +123,7 @@ fif() {
   rg --files-with-matches --no-messages "$1" | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' || rg --ignore-case --pretty --context 10 '$1' {}"
 }
 eval "$(starship init zsh)"
+eval "$(fnm env --use-on-cd)"
 
 export PNPM_HOME="/Users/zhangyongqi/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
