@@ -27,6 +27,7 @@ My DotFiles for macOS
 - wooshy
 - input source pro
 - wooshy
+- KeyCastr
 
 ## 字体
 
