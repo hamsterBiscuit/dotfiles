@@ -88,8 +88,8 @@ zinit light peterhurford/up.zsh
 zinit ice depth=1 wait"2" lucid
 zinit light MichaelAquilina/zsh-you-should-use
 
-zinit ice depth=1 wait"2" lucid
-zinit light skywind3000/z.lua
+# zinit ice depth=1 wait"2" lucid
+# zinit light skywind3000/z.lua
 
 # zinit ice depth=1 wait"2" lucid
 # zinit light lukechilds/zsh-nvm
@@ -124,6 +124,7 @@ fif() {
 }
 eval "$(starship init zsh)"
 eval "$(fnm env --use-on-cd)"
+eval "$(zoxide init zsh)"
 
 export PNPM_HOME="/Users/zhangyongqi/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
