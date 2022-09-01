@@ -85,8 +85,8 @@ zinit light hlissner/zsh-autopair
 zinit ice depth=1 wait"2" lucid
 zinit light peterhurford/up.zsh
 
-zinit ice depth=1 wait"2" lucid
-zinit light MichaelAquilina/zsh-you-should-use
+# zinit ice depth=1 wait"2" lucid
+# zinit light MichaelAquilina/zsh-you-should-use
 
 # zinit ice depth=1 wait"2" lucid
 # zinit light skywind3000/z.lua
