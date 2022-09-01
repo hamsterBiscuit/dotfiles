@@ -4,7 +4,6 @@ on_force_close: detach
 
 simplified_ui: false
 pane_frames: false
-theme: default
 
 default_mode: normal
 mouse_mode: true
@@ -16,6 +15,7 @@ template:
   direction: Horizontal
   parts:
     - direction: Vertical
+      borderless: true
       body: true
     - direction: Vertical
       borderless: true
