@@ -10,25 +10,20 @@ default_mode: normal
 mouse_mode: true
 scroll_buffer_size: 10000
 
-# template:
-#   direction: Horizontal
-#   parts:
-#     - direction: Vertical
-#       borderless: true
-#       split_size:
-#         Fixed: 1
-#       run:
-#         plugin:
-#           location: 'zellij:tab-bar'
-#     - direction: Vertical
-#       body: true
-#     - direction: Vertical
-#       borderless: true
-#       split_size:
-#         Fixed: 2
-#       run:
-#         plugin:
-#           location: 'zellij:status-bar'
+theme: nord
+
+template:
+  direction: Horizontal
+  parts:
+    - direction: Vertical
+      body: true
+    - direction: Vertical
+      borderless: true
+      split_size:
+        Fixed: 2
+      run:
+        plugin:
+          location: 'zellij:status-bar'
 
 # tabs:
 #   - name: 'Tab 1'

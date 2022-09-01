@@ -14,7 +14,7 @@ shell:
     # login
     - -l
     - -c
-    - 'zellij attach --index 0 --create'
+    - 'zellij --layout ~/.config/zellij/config.yaml attach --index 0 --create'
 
 window:
   # 窗口大小
