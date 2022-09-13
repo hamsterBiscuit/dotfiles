@@ -13,8 +13,8 @@ shell:
   args:
     # login
     - -l
-    - -c
-    - 'zellij --layout ~/.config/zellij/config.yaml attach --index 0 --create'
+    # - -c
+    # - 'zellij --layout ~/.config/zellij/config.yaml attach --index 0 --create'
 
 window:
   # 窗口大小
