@@ -49,18 +49,19 @@ scrolling:
 font:
   size: 16
   # 字体
+  # CaskaydiaCove Nerd Font
   normal:
     family: 'CaskaydiaCove Nerd Font'
-    # style: Regular
+    style: Regular
   bold:
     family: 'CaskaydiaCove Nerd Font'
-    # style: Bold
+    style: Bold
   italic:
     family: 'CaskaydiaCove Nerd Font'
-    # style: Italic
+    style: Italic
   bold_{i}talic:
     family: 'CaskaydiaCove Nerd Font'
-    # style: Bold Italic
+    style: Bold Italic
 
   # 细描边
   # use_thin_strokes: true
