@@ -1,0 +1,64 @@
+live_config_reload = true
+
+[colors.bright]
+black = "#5c6370"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#56b6c2"
+magenta = "#c678dd"
+red = "#d19a66"
+white = "#abb2bf"
+yellow = "#e5c07b"
+
+[colors.normal]
+black = "#282c34"
+blue = "#61afef"
+cyan = "#56b6c2"
+green = "#98c379"
+magenta = "#c678dd"
+red = "#e06c75"
+white = "#abb2bf"
+yellow = "#e5c07b"
+
+[colors.primary]
+background = "#282c34"
+foreground = "#abb2bf"
+
+[cursor.style]
+shape = "Beam"
+
+[font]
+size = 16
+
+[font.bold]
+family = "CaskaydiaCove Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "CaskaydiaCove Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "CaskaydiaCove Nerd Font"
+style = "Regular"
+
+[scrolling]
+history = 2000
+multiplier = 5
+
+[shell]
+args = ["-l"]
+program = "/bin/zsh"
+
+[window]
+decorations = "none"
+dynamic_padding = false
+startup_mode = "Maximized"
+
+[window.dimensions]
+columns = 120
+lines = 60
+
+[window.padding]
+x = 16
+y = 16
