@@ -1,28 +1,32 @@
-live_config_reload = true
+general.live_config_reload = true
+general.import = ["/Users/zhangyongqi/.local/share/nvim/lazy/tokyonight.nvim/extras/alacritty/tokyonight_storm.toml"]
 
-[colors.bright]
-black = "#5c6370"
-blue = "#61afef"
-cyan = "#56b6c2"
-green = "#56b6c2"
-magenta = "#c678dd"
-red = "#d19a66"
-white = "#abb2bf"
-yellow = "#e5c07b"
+[colors]
+draw_bold_text_with_bright_colors = true
 
-[colors.normal]
-black = "#282c34"
-blue = "#61afef"
-cyan = "#56b6c2"
-green = "#98c379"
-magenta = "#c678dd"
-red = "#e06c75"
-white = "#abb2bf"
-yellow = "#e5c07b"
-
-[colors.primary]
-background = "#282c34"
-foreground = "#abb2bf"
+# [colors.bright]
+# black = "#5c6370"
+# blue = "#61afef"
+# cyan = "#56b6c2"
+# green = "#56b6c2"
+# magenta = "#c678dd"
+# red = "#d19a66"
+# white = "#abb2bf"
+# yellow = "#e5c07b"
+#
+# [colors.normal]
+# black = "#282c34"
+# blue = "#61afef"
+# cyan = "#56b6c2"
+# green = "#98c379"
+# magenta = "#c678dd"
+# red = "#e06c75"
+# white = "#abb2bf"
+# yellow = "#e5c07b"
+#
+# [colors.primary]
+# background = "#282c34"
+# foreground = "#abb2bf"
 
 [cursor.style]
 shape = "Beam"
@@ -31,22 +35,23 @@ shape = "Beam"
 size = 16
 
 [font.bold]
-family = "CaskaydiaCove Nerd Font"
-style = "Bold"
+family = "FiraCode Nerd Font"
+
+[font.bold_italic]
+family = "VictorMono Nerd Font"
 
 [font.italic]
-family = "CaskaydiaCove Nerd Font"
+family = "VictorMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "CaskaydiaCove Nerd Font"
-style = "Regular"
+family = "FiraCode Nerd Font"
 
 [scrolling]
 history = 2000
 multiplier = 5
 
-[shell]
+[terminal.shell]
 args = ["-l"]
 program = "/bin/zsh"
 
