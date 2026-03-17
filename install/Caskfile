@@ -4,7 +4,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 cask "alacritty"
-cask "cheatsheet"
+cask "keyclu"
 cask "clash-verge-rev"
 cask "cursor"
 cask "finetune"
