@@ -20,14 +20,10 @@ My DotFiles for macOS
 
 ## 非自动安装软件清单
 
-- [Raycast](https://raycast.com/extensions/github)
-- things
-- clashx
-- spark
-- wooshy
-- input source pro
-- wooshy
-- KeyCastr
+- [Things 3](https://culturedcode.com/things/) - 任务管理
+- [Spark](https://sparkmailapp.com/) - 邮件客户端
+- [KeyCastr](https://github.com/keycastr/keycastr) - 按键显示
+- [Arc](https://arc.net/) - 浏览器
 
 ## 字体
 

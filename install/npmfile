@@ -1,5 +1,2 @@
-yarn
-typescript
-typescript-language-server
-npm-check
-lua-fmt
+# Global npm packages are managed via corepack (yarn, pnpm)
+# Install additional packages here if needed
