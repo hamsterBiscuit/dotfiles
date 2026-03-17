@@ -3,6 +3,7 @@
 	name = yongqi
 [core]
 	excludesfile = /Users/yongqi/.gitignore_global
+	filemode = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -17,3 +18,5 @@
 	defaultBranch = main
 [credential]
 	helper = cache
+[safe]
+	directory = *

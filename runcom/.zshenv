@@ -24,7 +24,7 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPROXY=https://goproxy.cn
 
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+# export PATH="$HOME/.cargo/bin:$PATH"
 
 # Editor
 export EDITOR="nvim"
@@ -49,8 +49,12 @@ export NVM_LAZY_LOAD=true
 
 # Lua
 export PATH="$HOME/develop/lua-language-server/bin:$PATH"
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # npm modules
 export NPM_MODULES="/usr/local/lib/node_modules"
 
+
+export PATH="$HOME/claude-model/bin:$PATH"
+
+export AVANTE_ANTHROPIC_API_KEY=9ea02e99-373b-4a66-9091-c56f67e32119

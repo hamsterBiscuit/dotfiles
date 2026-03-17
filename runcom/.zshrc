@@ -134,4 +134,16 @@ alias luamake=/Users/zhangyongqi/develop/lua-language-server/3rd/luamake/luamake
 # pnpm
 export PNPM_HOME="/Users/zhangyongqi/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+# pnpm end# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/zhangyongqi/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# Added by Antigravity
+export PATH="/Users/zhangyongqi/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+
+[[ ":$PATH:" != *":$HOME/.config/kaku/zsh/bin:"* ]] && export PATH="$HOME/.config/kaku/zsh/bin:$PATH" # Kaku PATH Integration
+[[ -f "$HOME/.config/kaku/zsh/kaku.zsh" ]] && source "$HOME/.config/kaku/zsh/kaku.zsh" # Kaku Shell Integration
